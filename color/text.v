@@ -75,3 +75,39 @@ pub fn (t Text) background(c Color) Text {
 
 	return t
 }
+
+pub fn (t Text) bold() Text {
+	return t.append_prefix('\x1b[1m')
+}
+
+pub fn (t Text) dim() Text {
+	return t.append_prefix('\x1b[2m')
+}
+
+pub fn (t Text) italic() Text {
+	return t.append_prefix('\x1b[3m')
+}
+
+pub fn (t Text) underline() Text {
+	return t.append_prefix('\x1b[4m')
+}
+
+pub fn (t Text) blink() Text {
+	return t.append_prefix('\x1b[5m')
+}
+
+pub fn (t Text) rapid_blink() Text {
+	return t.append_prefix('\x1b[6m')
+}
+
+pub fn (t Text) reverse() Text {
+	return t.append_prefix('\x1b[7m')
+}
+
+pub fn (t Text) hidden() Text {
+	return t.append_prefix('\x1b[8m')
+}
+
+pub fn (t Text) strikethrough() Text {
+	return t.append_prefix('\x1b[9m')
+}
