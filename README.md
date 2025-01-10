@@ -68,6 +68,9 @@ c.hidden().str()      // => \x1b[8mHello, World!\x1b[0m
 
 // You can chain styles
 c.bold().italic().underline().str() // => \x1b[1m\x1b[3m\x1b[4mHello, World!\x1b[0m
+
+// With color
+c.foreground(color.red).bold().str() // => \x1b[31m\x1b[1mHello, World!\x1b[0m
 ```
 
 ## License
