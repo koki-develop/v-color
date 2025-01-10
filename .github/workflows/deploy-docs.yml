@@ -22,7 +22,8 @@ jobs:
       - name: Generate docs
         run: |
           pushd color
-          v doc -m -f html .
+          v doc -readme -m -f html .
+          cp -r ./assets ./_docs/
           popd
 
       - uses: actions/upload-pages-artifact@v3
